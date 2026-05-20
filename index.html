@@ -143,6 +143,13 @@ h1.title {
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
+.placeholder {
+  font-size: 13px;
+  color: var(--text-faint);
+  margin: 0;
+  padding: 0.4rem 0 0.5rem;
+  font-style: italic;
+}
 .grow {
   display: flex;
   gap: 14px;
@@ -166,6 +173,12 @@ h1.title {
   font-size: 14px;
   line-height: 1.7;
   margin: 0;
+}
+.gt em {
+  font-style: italic;
+  background: var(--bg-subtle);
+  padding: 0 3px;
+  border-radius: 2px;
 }
 footer.foot {
   margin-top: 3.25rem;
@@ -243,7 +256,7 @@ footer.foot .col {
     <div class="grow"><span class="gn">4조</span><p class="gt">2인의 결석자가 있어서 출석자 2인은 나머지 3인 구성 조에 참여하여 토의 진행.</p></div>
     <div class="grow"><span class="gn">5조</span><p class="gt">할복 문화 관련 언급에 주목했다. 무엇이 그들로 하여금 할복까지 하게 했나. 남의 눈치를 많이 봐서일까. 만약 그렇다면 그런 문화가 생긴 이유는. 일본이 전국 시기에 계속 혼란이 지속됐고, 그래서 집단에 속해 있지 않으면 힘들어서 개인이 집단에 예속된 것 같다. 집단의 신념에 개인이 반기를 들기 어려웠을 것이다.</p></div>
     <div class="grow"><span class="gn">6조</span><p class="gt">견문록이란 게 무엇일까. 여기에 재현이 개입하나. 글 쓰는 사람의 생각이 노출되는 경우가 대다수인 것 같긴 하다. 이 작품의 경우 저자에 대한 관심이 전보다는 높았다. 이 사람의 표현력이 눈에 띈다. 저자의 주체적 수용과 평가가 눈에 띈다. 그런 식으로 구성된 글을 읽었을 때의 장단점이 있겠지만, 재미로만 치면 단순 나열보다는 저자 자신의 특성이 반영된 글을 읽는 것이 재미가 좋다. 각자 인상 깊게 읽은 장면 중, 일본인들이 산과 관련해 믿기 어려운 얘기를 했는데 그것을 이해할 만한 것으로 저자가 바꾸고 있는 것 같다. 여행기를 읽는 것의 가치를 다시 생각해봤다. 당시에 이 글이 쓰였을 때 이것이 지금 생각되는 것과 다르게 어떤 가치가 있었던 것일까. 할복 관련 장면이 인상 깊었는데, 할복이 특정 지역 사람만 한 것이 아닌데도 특정인만 하는 것이라 말한 이유가 뭘까. 무지의 소산일 뿐일까, 알고도 그랬다면 그런 식으로 말한 이유가 뭘까. 외국인 입장에서 봤을 때 '국가적 차원에서 규정될 문화가 있다고 했을 때' 그런 관점은 좀 위험한 게 아닐까 하는 얘기를 했다.</p></div>
-    <div class="grow"><span class="gn">7조</span><p class="gt">조선은 유교에 충실했지만 일본은 그렇지 않았다. 가장이 거의 모든 것을 결정하는 극단적인 상하관계가 일본에 존재하는 것 같다. 일본이 빨리 근대화할 수 있었던 이유는 에도 말기에 친도요토미 세력이 남아 있었기 때문이 아니겠나. 하지만 지금은 일본이 뒤쳐져 있는 역사 전개의 아이러니에 대해 이야기했다. 임진왜란 역시 당시 조선이 약하다는 걸 알고 쳐들어 온 것이 아니라는 점도 짚었다. 조선 시대 가사에서 여성 화자의 문제와 시가에서의 페르소나 문제에 대해서도 논의했다.</p></div>
+    <div class="grow"><span class="gn">7조</span><p class="gt"><em>'조선은 유교에 충실했지만 일본은 그렇지 않았다'</em>. 가장이 거의 모든 것을 결정하는 극단적인 상하관계가 일본에 존재하는 것 같다. 일본이 빨리 근대화할 수 있었던 이유는 에도 말기에 친도요토미 세력이 남아 있었기 때문이 아니겠나. 하지만 지금은 일본이 뒤쳐져 있는 역사 전개의 아이러니에 대해 이야기했다. 임진왜란 역시 당시 조선이 약하다는 걸 알고 쳐들어 온 것이 아니라는 점도 짚었다. 조선 시대 가사에서 여성 화자의 문제와 시가에서의 페르소나 문제에 대해서도 논의했다.</p></div>
   </div>
 </article>
 
@@ -253,35 +266,29 @@ footer.foot .col {
   <p class="sub">박지원 · 「열하일기」 중, 1780년 연행 중 옥갑에서 들은 야담</p>
   <p class="groups-label">조별 발표 요약</p>
   <div>
-    <div class="grow"><span class="gn">1조</span><p class="gt">액자식 구성과 '옥갑'이라는 공간이 이야기에 부여하는 위상.</p></div>
-    <div class="grow"><span class="gn">2조</span><p class="gt">허생이라는 인물의 양가성 — 시장 개입과 무위(無爲)의 공존.</p></div>
-    <div class="grow"><span class="gn">3조</span><p class="gt">들은 이야기를 옮기는 자로서 박지원이 취하는 거리두기.</p></div>
-    <div class="grow"><span class="gn">4조</span><p class="gt">18세기 조선 경제 현실에 대한 우화적 응답으로 읽기.</p></div>
-    <div class="grow"><span class="gn">5조</span><p class="gt">야담이라는 장르가 가능케 하는 비판의 자유.</p></div>
-    <div class="grow"><span class="gn">6조</span><p class="gt">'여행 중에 들은 이야기'라는 설정이 작품에 부여하는 무게.</p></div>
-    <div class="grow"><span class="gn">7조</span><p class="gt">「허생전」과 박지원 다른 산문의 화법 비교.</p></div>
+    <div class="grow"><span class="gn">1조</span><p class="gt">이인화와 허생을 비교할 때, 허생은 유능함에도 행하지 않은 게 문제라는 의견이 있었다. 하지만 양란 후 기반 시설이 파괴되어 뭔가 의미 있는 일을 시작하기 어려웠고, 노력한다고 바꿀 수 있는 사회였는지 의문이라는 의견, 허생이 과연 뭘 했어야 되나 하는 의견도 있었다. <em>'양란 이후 영웅소설이 흔한데'</em>, 이건 어떤 맥락에서 나온 것일까. 「옥갑야화」는 단지 야화를 묶어놓은 것인데 과연 무슨 의미가 있는가. 홍순언 일화를 비롯한 구원서사가 등장하는데, 명-조선 간 관계에서 구원의 구조에 관련해 추가로 얘기했다.</p></div>
+    <div class="grow"><span class="gn">2조</span><p class="gt">저자가 돈의 의미를 확장(돈을 떼어먹은 역관 일화 등)하여 운용하고 있다는 관찰이 있었다. 섬에 도적을 가둘 때 문자를 금지한 화소에 대해서도 토의했다.</p></div>
+    <div class="grow"><span class="gn">3조</span><p class="gt">허생이 문제다. 매점매석은 명백한 위해를 가한 것이며, 병 주고 약 준 것이다. 아내를 내팽개친 것도 문제다. 자신의 생계도 책임지지 못한 상황에서 국가를 어떻게 책임지나. 또, 허생이 생각하는 도란 무엇인가. 그는 실천하지 않고 주장만 앞선다. 실천 없는 사상은 공허한 것이다. 그나마 실천으로 볼 만한 도적 일화의 경우, 일종의 사회실험 같은데, 그저 본인이 하고 싶은 것을 해본 것에 불과하지 않은가. 한편, 허생 이야기가 여행기에 수록된 이유는 무엇일지 얘기했다. 허생의 입을 빌어 양반층에게 교훈을 주고자 한 것 아니겠나.</p></div>
+    <div class="grow"><span class="gn">4조</span><p class="gt">「옥갑야화」의 구조와 허생 이야기의 구조에 대해서 논의했다. 허생 이야기에는 권선징악이 드러나지 않는다. 「옥갑야화」의 전체적 구조에 있어서, 여러 역관들의 이야기가 앞서 등장하고 마지막에 허생 이야기가 나온다. 허생 이야기가 가장 길고 마지막에 배치한 것으로 보아, 박지원의 핵심 의도는 허생 이야기에 있을 것 같다. 그렇다면 이것은 결국 해결의 주체는 양반 계층에게 있다는 말 아니겠나. 한편 등장인물에 대한 윤리적 평가는 이번에도 나왔는데, 가령 능력 있는 자가 왜 국가에 기여하지 않았는가를 책망한 경우도 있고, 굳이 국가에 기여할 필요는 없지 않은가 하는 의견도 있었다. 변승업이 허생에게 말없이 돈을 빌려준 이유에 대해 어떻게 생각하나. 변승업의 전체 재산에 비해 큰 액수가 아니었거나, 허생의 인품을 봤기 때문이 아닐까. 그 밖에 사회 비판, 고위 공직자의 대외 처세 방식에 대한 평가도 갈렸는데, '오랑캐 옷을 입고 청 문물을 받아들이자'는 주장이 당시에 어떻게 비쳤는가를 말하다 끝났다.</p></div>
+    <div class="grow"><span class="gn">5조</span><p class="gt">허생이 '힘숨찐'(힘을 숨긴 찐따) 캐릭터와 비슷한 것 같다는 취지의 이야기를 나눴고, 한글소설에 등장하는 패턴화된 권선징악 스토리와 한문 소설의 어정쩡한 스탠스가 대비를 이룬다는 논의 등을 했다.</p></div>
+    <div class="grow"><span class="gn">6조</span><p class="gt">허생을 등장시킨 의도가 무엇일까. 돈을 많이 벌거나 과장된 사건들을 통해서 허생의 능력을 부각시키기 위해서가 아닐까. 허생이 직접 정계에 진출하여 문제를 해결하지 않고 은둔해 있다고 설정함으로써, 은둔자에게 책임이 있는가를 박지원이 탐색하고 싶었던 것이 아닐까. 허생이 빌린 1만냥이 약 5억원 정도라는 추산을 거론하며(당시 쌀값을 기준으로 추산했으나 그 근거 자체가 확실하지 않다는 점도 함께 지적됨), 그 돈으로 안성의 모든 과일을 독점할 수 있었을까. 이야기의 비현실성을 부각하는 장치가 아니겠나 하는 얘기를 나눴다.</p></div>
+    <div class="grow"><span class="gn">7조</span><p class="gt">허생의 아내가 불쌍하다. 애초에 부부싸움에서 출발한 이야기 아닐까. 중고교에서는 '매점매석이 나라를 망하게 할 수 있다'는 식으로 얘기하지만 정작 허생에 대해서는 왜 그런 얘기를 하지 않는가. 도적들을 무인도에 가두는 것이 킬링필드와 무엇이 다른가.</p></div>
   </div>
-</article>
-
-<article class="session compact">
-  <div class="meta"><span>2026년 5월 5일 · 화</span><span class="sep">·</span><span>제10주차</span><span class="tag">휴강</span></div>
-  <h2 class="session-title">어린이날 휴강</h2>
 </article>
 
 <article class="session">
-  <div class="meta"><span>2026년 4월 28일 · 화</span><span class="sep">·</span><span>제9주차</span><span class="tag">조선 18세기 · 한글</span></div>
+  <div class="meta"><span>2026년 5월 5일 · 화</span><span class="sep">·</span><span>제10주차</span><span class="tag">조선 18세기 · 한글</span><span class="tag">포스팅으로 갈음</span></div>
   <h2 class="session-title">을병연행록<span class="han">乙丙燕行錄</span></h2>
   <p class="sub">홍대용 · 1765–1766년 연행 기록 (한글본)</p>
+  <p class="placeholder">어린이날 휴강으로 조별 토의는 미진행 · 학생 개별 포스팅으로 갈음.</p>
+</article>
+
+<article class="session">
+  <div class="meta"><span>2026년 4월 28일 · 화</span><span class="sep">·</span><span>제9주차</span><span class="tag">21세기 · 영화</span></div>
+  <h2 class="session-title">여행자의 필요</h2>
+  <p class="sub">홍상수 감독 · 2024년</p>
   <p class="groups-label">조별 발표 요약</p>
-  <div>
-    <div class="grow"><span class="gn">1조</span><p class="gt">한글이라는 매체 선택이 독자(청자)를 재구성하는 방식.</p></div>
-    <div class="grow"><span class="gn">2조</span><p class="gt">엄성·반정균 등 항주 학자들과의 만남과 그 우정의 정치성.</p></div>
-    <div class="grow"><span class="gn">3조</span><p class="gt">청 문물에 대한 관찰이 화이론에 가하는 압박.</p></div>
-    <div class="grow"><span class="gn">4조</span><p class="gt">사대부 여성을 염두에 둔 서술 전략과 한글의 자리.</p></div>
-    <div class="grow"><span class="gn">5조</span><p class="gt">천문과 기기에 대한 관심이 텍스트에 들어오는 통로.</p></div>
-    <div class="grow"><span class="gn">6조</span><p class="gt">'연행록'이라는 장르 안에서 「을병연행록」의 위치.</p></div>
-    <div class="grow"><span class="gn">7조</span><p class="gt">귀국 후의 자기 검열과 텍스트의 유통 경로.</p></div>
-  </div>
+  <p class="placeholder">추후 정리 예정.</p>
 </article>
 
 <article class="session compact">
@@ -291,35 +298,19 @@ footer.foot .col {
 </article>
 
 <article class="session">
-  <div class="meta"><span>2026년 4월 14일 · 화</span><span class="sep">·</span><span>제7주차</span><span class="tag">21세기 · 영화</span></div>
-  <h2 class="session-title">여행자의 필요</h2>
-  <p class="sub">홍상수 감독 · 2024년</p>
-  <p class="groups-label">조별 발표 요약</p>
-  <div>
-    <div class="grow"><span class="gn">1조</span><p class="gt">이리스의 한국어 학습 장면이 영화 안에서 갖는 위상.</p></div>
-    <div class="grow"><span class="gn">2조</span><p class="gt">막걸리·시낭송·산책 — 일상적 사물이 카메라 앞에서 반복되는 방식.</p></div>
-    <div class="grow"><span class="gn">3조</span><p class="gt">'여행자'라는 말의 모호함 — 체류와 진짜 여행 사이.</p></div>
-    <div class="grow"><span class="gn">4조</span><p class="gt">즉흥적 연출과 인물의 자기 노출이 맞물리는 지점.</p></div>
-    <div class="grow"><span class="gn">5조</span><p class="gt">한국인 인물들에게 '이리스'라는 존재가 작용하는 방식.</p></div>
-    <div class="grow"><span class="gn">6조</span><p class="gt">카메라의 거리와 정지된 응시.</p></div>
-    <div class="grow"><span class="gn">7조</span><p class="gt">다른 홍상수 영화의 외국인 인물들과 견주어 본 이리스.</p></div>
-  </div>
-</article>
-
-<article class="session">
-  <div class="meta"><span>2026년 4월 7일 · 화</span><span class="sep">·</span><span>제6주차</span><span class="tag">20세기 · 한국 소설</span></div>
+  <div class="meta"><span>2026년 4월 14일 · 화</span><span class="sep">·</span><span>제7주차</span><span class="tag">20세기 · 한국 소설</span></div>
   <h2 class="session-title">만세전<span class="han">萬歲前</span></h2>
   <p class="sub">염상섭 · 1922년 「묘지」로 연재, 1924년 개작 단행본</p>
   <p class="groups-label">조별 발표 요약</p>
-  <div>
-    <div class="grow"><span class="gn">1조</span><p class="gt">도쿄–부산–경성으로 이어지는 노선 자체가 만들어내는 이야기.</p></div>
-    <div class="grow"><span class="gn">2조</span><p class="gt">이인화의 환멸과 '아무것도 하지 않음'이 무엇을 향하는가.</p></div>
-    <div class="grow"><span class="gn">3조</span><p class="gt">식민지 조선의 풍경을 응시하는 유학생의 위치.</p></div>
-    <div class="grow"><span class="gn">4조</span><p class="gt">술집·여관·기차칸이라는 공간의 정치.</p></div>
-    <div class="grow"><span class="gn">5조</span><p class="gt">일본인 동승자와의 대화에서 드러나는 동화와 거리.</p></div>
-    <div class="grow"><span class="gn">6조</span><p class="gt">「묘지」에서 「만세전」으로의 제목 변경이 갖는 무게.</p></div>
-    <div class="grow"><span class="gn">7조</span><p class="gt">1920년대 환멸하는 여행자라는 인물형의 위치.</p></div>
-  </div>
+  <p class="placeholder">추후 정리 예정.</p>
+</article>
+
+<article class="session">
+  <div class="meta"><span>2026년 4월 7일 · 화</span><span class="sep">·</span><span>제6주차</span><span class="tag">21세기 · 자전</span></div>
+  <h2 class="session-title">랭스로 되돌아가다</h2>
+  <p class="sub">디디에 에리봉(Didier Eribon) · 2009년 (한국어판 2021) · 노동계급 출신 사회학자의 계급 자전</p>
+  <p class="groups-label">조별 발표 요약</p>
+  <p class="placeholder">추후 정리 예정.</p>
 </article>
 
 <article class="session">
@@ -327,15 +318,7 @@ footer.foot .col {
   <h2 class="session-title">서유기</h2>
   <p class="sub">최인훈 · 1966년</p>
   <p class="groups-label">조별 발표 요약</p>
-  <div>
-    <div class="grow"><span class="gn">1조</span><p class="gt">환상적 서사 안에서 1960년대의 시간이 회상되는 구조.</p></div>
-    <div class="grow"><span class="gn">2조</span><p class="gt">'손오공'이라는 인물의 차용 — 동아시아 텍스트의 재기입.</p></div>
-    <div class="grow"><span class="gn">3조</span><p class="gt">「광장」·「회색인」과 「서유기」 사이의 연속과 단절.</p></div>
-    <div class="grow"><span class="gn">4조</span><p class="gt">분단과 전쟁의 기억이 작품 안에서 작동하는 방식.</p></div>
-    <div class="grow"><span class="gn">5조</span><p class="gt">화자의 자기 분열과 여행이라는 메타포.</p></div>
-    <div class="grow"><span class="gn">6조</span><p class="gt">텍스트의 시간 처리 — 회상·환상·서술 현재의 층위.</p></div>
-    <div class="grow"><span class="gn">7조</span><p class="gt">1960년대 한국 모더니즘 소설의 한 좌표로서의 「서유기」.</p></div>
-  </div>
+  <p class="placeholder">추후 정리 예정.</p>
 </article>
 
 <article class="session compact">
@@ -349,15 +332,7 @@ footer.foot .col {
   <h2 class="session-title">아담이 눈 뜰 때</h2>
   <p class="sub">장정일 · 1990년</p>
   <p class="groups-label">조별 발표 요약</p>
-  <div>
-    <div class="grow"><span class="gn">1조</span><p class="gt">1980년대 말 청춘의 자기 발견과 도시 공간.</p></div>
-    <div class="grow"><span class="gn">2조</span><p class="gt">책·음악·영화 — 인용으로 채워지는 자아 형성.</p></div>
-    <div class="grow"><span class="gn">3조</span><p class="gt">욕망과 정치성의 분리, 혹은 결합.</p></div>
-    <div class="grow"><span class="gn">4조</span><p class="gt">1990년대 문학의 출발점에서 본 작품의 자리.</p></div>
-    <div class="grow"><span class="gn">5조</span><p class="gt">'눈 뜸'이라는 메타포의 정치적 함의.</p></div>
-    <div class="grow"><span class="gn">6조</span><p class="gt">화자의 시점과 거리.</p></div>
-    <div class="grow"><span class="gn">7조</span><p class="gt">작품 안에서 여행과 이동이 갖는 의미.</p></div>
-  </div>
+  <p class="placeholder">추후 정리 예정.</p>
 </article>
 
 <article class="session compact">
