@@ -16,6 +16,7 @@
   --text-faint: #9c9489;
   --border: rgba(24, 22, 19, 0.11);
   --bg-subtle: rgba(24, 22, 19, 0.035);
+  --em-bg: rgba(24, 22, 19, 0.085);
   --accent: #6e4b3b;
 }
 @media (prefers-color-scheme: dark) {
@@ -26,6 +27,7 @@
     --text-faint: #756c5e;
     --border: rgba(235, 231, 221, 0.13);
     --bg-subtle: rgba(235, 231, 221, 0.04);
+    --em-bg: rgba(235, 231, 221, 0.11);
     --accent: #c89671;
   }
 }
@@ -41,46 +43,53 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-main {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 4rem 1.75rem 5rem;
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  padding: 4rem 1.75rem 3rem;
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.55) 100%), url('header-bg.jpg');
+  background-size: cover;
+  background-position: center 70%;
+  color: #f5f3ee;
+  display: flex;
+  align-items: center;
 }
-.eyebrow {
+.hero-inner { max-width: 700px; margin: 0 auto; }
+.hero .eyebrow {
+  color: rgba(245, 243, 238, 0.78);
   font-size: 11px;
-  color: var(--text-faint);
-  margin: 0 0 0.55rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 500;
-}
-h1.title {
-  font-family: "Noto Serif KR", "Apple SD Gothic Neo", serif;
-  font-size: 32px;
-  font-weight: 500;
   margin: 0 0 0.7rem;
+}
+.hero h1.title {
+  color: #ffffff;
+  font-family: "Noto Serif KR", "Apple SD Gothic Neo", serif;
+  font-size: 34px;
+  font-weight: 500;
+  margin: 0 0 0.85rem;
   letter-spacing: -0.005em;
   line-height: 1.25;
 }
-.lead {
+.hero .lead {
+  color: rgba(245, 243, 238, 0.93);
   font-size: 14.5px;
-  color: var(--text-muted);
-  margin: 0;
   line-height: 1.75;
   max-width: 540px;
+  margin: 0;
 }
-.divider {
-  margin: 2.75rem 0 0.25rem;
-  border: none;
-  border-top: 0.5px solid var(--border);
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem 1.75rem 5rem;
 }
 .session {
   padding: 1.85rem 0 1.6rem;
   border-bottom: 0.5px solid var(--border);
 }
-.session.compact {
-  padding: 1rem 0;
-}
+.session.compact { padding: 1rem 0; }
 .session:last-of-type { border-bottom: none; }
 .meta {
   display: flex;
@@ -169,16 +178,12 @@ h1.title {
   color: var(--accent);
   font-feature-settings: "tnum" 1;
 }
-.gt {
-  font-size: 14px;
-  line-height: 1.7;
-  margin: 0;
-}
+.gt { font-size: 14px; line-height: 1.7; margin: 0; }
 .gt em {
   font-style: italic;
-  background: var(--bg-subtle);
-  padding: 0 3px;
-  border-radius: 2px;
+  background: var(--em-bg);
+  padding: 1px 5px;
+  border-radius: 3px;
 }
 footer.foot {
   margin-top: 3.25rem;
@@ -206,23 +211,25 @@ footer.foot .col {
   letter-spacing: 0.06em;
 }
 @media (max-width: 620px) {
-  main { padding: 2.5rem 1.25rem 3.5rem; }
-  h1.title { font-size: 26px; }
+  .hero { padding: 3rem 1.25rem 2.5rem; min-height: 280px; }
+  .hero h1.title { font-size: 27px; }
+  main { padding: 1.25rem 1.25rem 3.5rem; }
   .session-title { font-size: 19px; }
   .session.compact .session-title { font-size: 14.5px; }
 }
 </style>
 </head>
 <body>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">2026년 1학기 · 화요일 토의 아카이브</p>
+    <h1 class="title">한국문학과 여행</h1>
+    <p class="lead">매주 화요일 약 60분 가량, 한 편의 텍스트를 조별로 토의하고 발표합니다. 본 페이지는 학기 동안 조별 발표 요약을 누적합니다. 목요일 강의 노트는 별도 페이지로 관리됩니다.</p>
+  </div>
+</section>
+
 <main>
-
-<header>
-  <p class="eyebrow">2026년 1학기 · 화요일 토의 아카이브</p>
-  <h1 class="title">한국문학과 여행</h1>
-  <p class="lead">매주 화요일 75분 동안 한 편의 텍스트를 조별로 발표·토의합니다. 본 페이지는 학기 동안 조별 발표 요약을 누적합니다. 목요일 강의 노트는 별도 페이지로 관리됩니다.</p>
-</header>
-
-<hr class="divider">
 
 <section>
 
@@ -250,7 +257,7 @@ footer.foot .col {
   <p class="sub">신유한 · 1719년 기해 통신사 제술관의 일본 견문기</p>
   <p class="groups-label">조별 발표 요약</p>
   <div>
-    <div class="grow"><span class="gn">1조</span><p class="gt">(1) 「을병연행록」이나 「해유록」 등과 달리, 해외 사절이 우리나라에 와서 쓴 글은 왜 잘 안 알려져 있을까. 학계에서 감추고 있는 게 아닐까. (2) 국문학과 일문학의 차이. 노벨상 수상자 숫자 차이에서 보이듯 국제적 인지도 차이는 왜 발생할까. 우리나라만의 특수한 역사적 배경 때문일까. 일본도 특수성은 상당하지 않은가. 어쩌면 한국이 일본보다 서구 문화를 늦게 받아들였기 때문이 아닐까. 혹은 우리나라는 '이념적'인 소설이 많고 일본은 '사변적'인 소설이 많아서 번역되고 대중화되기 쉬운 게 아닐까.</p></div>
+    <div class="grow"><span class="gn">1조</span><p class="gt">(1) 「을병연행록」이나 「해유록」 등과 달리, 해외 사절이 우리나라에 와서 쓴 글은 왜 잘 안 알려져 있을까. 학계에서 감추고 있는 게 아닐까. (2) 국문학과 일문학의 차이. 노벨상 수상자 숫자 차이에서 보이듯 국제적 인지도 차이는 왜 발생할까. 우리나라만의 특수한 역사적 배경 때문일까. 일본도 특수성은 상당하지 않은가. 어쩌면 한국이 일본보다 서구 문화를 늦게 받아들였기 때문이 아닐까. 혹은 <em>"우리나라는 '이념적'인 소설이 많고 일본은 '사변적'인 소설이 많아서"</em> 번역되고 대중화되기 쉬운 게 아닐까.</p></div>
     <div class="grow"><span class="gn">2조</span><p class="gt">우선 「을병연행록」보다 재미있다. 신유한이 흥미로운 인물이라서 그런 것 같다. 신유한이 흥미로운 인물인 이유: (1) 통찰력이 있다. 개개인이 아니라 제도를 통해서 사회를 분석하려 든다. 개별 사건에 매몰되지 않는다. (2) 묘사의 핍진성. (3) 현대인이 신유한으로부터 배울 점이 있다. 있는 그대로를 보는 것이 아니라 배울 점을 찾아낸다. 그 역시 조선인의 편견이 있을 수도 있지만, 해괴하다고 여겨질 만한 사실에 대해 이유를 탐색한다. (4) 흥미로운 것을 추구한다. 요즘 말로 도파민을 추구하는 사람 같다.</p></div>
     <div class="grow"><span class="gn">3조</span><p class="gt">임란 직후라 일본을 비판적으로 본 것 아니겠나. 일인의 조선에 대한 관심이 눈에 띈다. 그 일본인들은 글은 왜 배우려 했을까. 무인이 득세하고 있어서 글을 배우고 싶어도 배우기 어렵다 보니 그런 욕망이 생긴 것이 아닐까. 또, 그들은 왜 한글을 배우려 했을까. 선생의 말마따나 대부분의 일본인은 한글을 배우고 싶어하지 않았을 수도 있는데, 저자가 '한글을 배우려 하는 소수의 일본인 사례'를 대서특필한 건 아닐까.</p></div>
     <div class="grow"><span class="gn">4조</span><p class="gt">2인의 결석자가 있어서 출석자 2인은 나머지 3인 구성 조에 참여하여 토의 진행.</p></div>
@@ -353,7 +360,7 @@ footer.foot .col {
   <h3>조 편성</h3>
   <p>총 7개 조 · 각 조 4인. 조원 명칭은 갑돌이·을돌이·병돌이·정돌이로 통일합니다 (가명).</p>
   <h3>강의 운영</h3>
-  <p>화요일 — 학생 조별 발표·토의 / 목요일 — 강의자 강의<br>토의 발표 요약은 매주 화요일 수업 종료 후 게시됩니다.</p>
+  <p>화요일 — 학생 조별 토의 및 발표 / 목요일 — 강의자 강의<br>토의 발표 요약은 매주 화요일 수업 종료 후 게시됩니다.</p>
   <p class="col">한국문학과 여행 · 2026년 1학기</p>
 </footer>
 
